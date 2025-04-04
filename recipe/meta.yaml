@@ -12,17 +12,17 @@ source:
 build:
   number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  skip: true  # [py<39]
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python  >=3.9
     - pip
     - setuptools
     - wheel
     - flit-core >=3.7
   run:
-    - python
+    - python >=3.9
     - sphinx >=5
     
 test:
