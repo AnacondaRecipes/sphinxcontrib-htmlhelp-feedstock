@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv"
   noarch: python
 
 requirements:
@@ -40,7 +40,7 @@ test:
     - python -m pytest -v tests
 
 about:
-  home: http://sphinx-doc.org/
+  home: https://sphinx-doc.org/
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENCE.rst
