@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/sphinxcontrib-htmlhelp/sphinxcontrib_htmlhelp-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: c9e2916ace8aad64cc13a0d233ee22317f2b9025b9cf3295249fa985cc7082e9
 
 build:
@@ -36,7 +36,7 @@ test:
     - sphinx >=5
     - defusedxml
   commands:
-    #- pip check
+    - pip check
     - python -m pytest -v tests
 
 about:
